@@ -7,7 +7,7 @@
 2. It will be more efficient to divide the size of array by 4
 
 ### LinkedList
-```+java
+```java
 public class StackLinkedList {
     Node first = null;
 
@@ -36,7 +36,7 @@ public class StackLinkedList {
 ```
 
 ### Array
-```+java
+```java
 public class StackArray {
     String[] array = new String[1];
     int index = 0;
@@ -70,7 +70,7 @@ public class StackArray {
 ## Queue Implement
 
 ### LinkedList
-```+java
+```java
 public class QueueLinkedList {
     Node first, last;
 
@@ -121,7 +121,7 @@ The function **twoSum** should return indices of the two numbers such that they 
 2. Using the **target-number** as Hashtable key
 
 ### Python
-```+python3
+```python
 class Solution:
     """
     @param numbers: An array of Integer
@@ -142,7 +142,7 @@ class Solution:
 ```
 
 ### Java
-```+Java
+```java
 import java.util.Hashtable;
 
 public class TwoSum {
@@ -185,7 +185,7 @@ Reverse a linked list.
 2. The new node is created to point previous node
 
 ### Python
-```+python3
+```python
 # Definition of ListNode
 class ListNode(object):
     def __init__(self, val, next=None):
@@ -207,7 +207,7 @@ class Solution:
 ```
 
 ### Java
-```+java
+```java
 // Definition for ListNode
 public static class ListNode {
     int val;
