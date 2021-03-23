@@ -108,6 +108,74 @@ public class QueueLinkedList {
 
 ```
 
+## 35. Reverse Linked List 
+
+### Description
+Reverse a linked list.
+
+### Python
+```python
+# Definition of ListNode
+class ListNode(object):
+    def __init__(self, val, next=None):
+        self.val = val
+        self.next = next
+
+class Solution:
+    """
+    @param head: n
+    @return: The new head of reversed linked list.
+    """
+    def reverse(self, head):
+        # write your code here
+        prev = None
+        curr = head
+        
+        while curr != None:
+            temp = curr.next
+            curr.next = prev
+            prev = curr
+            curr = temp
+        
+        head = prev
+        return head
+```
+
+### Java
+```java
+// Definition for ListNode
+public static class ListNode {
+    int val;
+    ListNode next;
+
+    ListNode(int x) {
+        val = x;
+        next = null;
+    }
+}
+
+public class Solution {
+    /**
+     * @param head: n
+     * @return: The new head of reversed linked list.
+     */
+    public ListNode reverse(ListNode head) {
+        // write your code here
+        ListNode prev = null;
+        ListNode curr = head;
+        
+        while (curr != null) {
+            ListNode temp = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = temp;
+        }
+        head = prev;
+        return head;
+    }
+}
+```
+
 ## 56. TwoSum
 
 ### Description
@@ -173,67 +241,4 @@ public class TwoSum {
     }
 }
 
-```
-
-## 35. Reverse Linked List 
-
-### Description
-Reverse a linked list.
-
-### Note
-1. **Can not** point directly to original node
-2. The new node is created to point previous node
-
-### Python
-```python
-# Definition of ListNode
-class ListNode(object):
-    def __init__(self, val, next=None):
-        self.val = val
-        self.next = next
-
-class Solution:
-    """
-    @param head: n
-    @return: The new head of reversed linked list.
-    """
-    def reverse(self, head):
-        # write your code here
-        prev = None
-        while head != None:
-            prev = ListNode(head.val, prev)
-            head = head.next
-        return prev
-```
-
-### Java
-```java
-// Definition for ListNode
-public static class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode(int x) {
-        val = x;
-        next = null;
-    }
-}
-
-public class Solution {
-    /**
-     * @param head: n
-     * @return: The new head of reversed linked list.
-     */
-    public ListNode reverse(ListNode head) {
-        // write your code here
-        ListNode prev = null;
-        while (head != null) {
-            ListNode node = new ListNode(head.val);
-            node.next = prev;
-            prev = node;
-            head = head.next;
-        }
-        return prev;
-    }
-}
 ```
